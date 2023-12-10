@@ -1,0 +1,1 @@
+console.log('Front é coisa de retardado')
