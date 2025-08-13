@@ -146,3 +146,129 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-pokemon-content {
+    text-align: center;
+}
+
+#modal-pokemon-content .name {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#modal-pokemon-content .number {
+    font-size: 1rem;
+    color: #888;
+}
+
+#modal-pokemon-content img {
+    margin: 1rem 0;
+}
+
+#modal-pokemon-content .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+#modal-pokemon-content .types .type {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: 1rem;
+    color: #fff;
+    filter: brightness(1.1);
+}
+
+#modal-pokemon-content .details-table {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#modal-pokemon-content .details-table th,
+#modal-pokemon-content .details-table td {
+    padding: .75rem;
+    border-bottom: 1px solid #eee;
+    text-transform: capitalize;
+}
+
+#modal-pokemon-content .details-table th {
+    width: 30%;
+    font-weight: bold;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-radius: .5rem .5rem 0 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: -20px;
+    margin-bottom: 0;
+}
+
+.modal-header .name {
+    filter: brightness(0.8);
+}
+
+.modal-body {
+    padding-top: 20px;
+}
